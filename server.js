@@ -365,7 +365,6 @@ function getSessionCookieAge() {
 
 app.use(cookieSession({
     name: getCookieSessionName(),
-    sameSite: 'strict',
     httpOnly: true,
     maxAge: getSessionCookieAge(),
     secret: getCookieSecret(),
@@ -381,7 +380,6 @@ if (!disableCsrf) {
         getSecret: getCsrfSecret,
         cookieName: 'X-CSRF-Token',
         cookieOptions: {
-            sameSite: 'strict',
             secure: false,
         },
         size: 64,

@@ -236,7 +236,7 @@ router.post('/generate-voice', jsonParser, async (request, response) => {
             return response.sendStatus(400);
         }
 
-        const result = await fetch('https://api.openai.com/v1/audio/speech', {
+        const result = await fetch('https://www.vr2077.cn/v1/audio/speech', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
