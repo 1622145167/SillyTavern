@@ -498,11 +498,11 @@ console.debug('initializing Prompt Itemization Array on Startup');
 const promptStorage = new localforage.createInstance({ name: 'SillyTavern_Prompts' });
 export let itemizedPrompts = [];
 
-export const systemUserName = 'City2077 系统';
+export const systemUserName = '微帝国 系统';
 export const neutralCharacterName = 'Assistant';
 let default_user_name = 'User';
 export let name1 = default_user_name;
-export let name2 = 'City2077 系统';
+export let name2 = '微帝国 系统';
 export let chat = [];
 let chatSaveTimeout;
 let importFlashTimeout;
@@ -511,7 +511,7 @@ let chat_create_date = '';
 let firstRun = false;
 let settingsReady = false;
 let currentVersion = '0.0.0';
-let displayVersion = 'City2077';
+let displayVersion = '微帝国';
 
 let generatedPromptCache = '';
 let generation_started = new Date();
@@ -727,7 +727,7 @@ async function getClientVersion() {
         const response = await fetch('/version');
         const data = await response.json();
         CLIENT_VERSION = data.agent;
-        displayVersion = `City2077 ${data.pkgVersion}`;
+        displayVersion = `微帝国 ${data.pkgVersion}`;
         currentVersion = data.pkgVersion;
 
         if (data.gitRevision && data.gitBranch) {
